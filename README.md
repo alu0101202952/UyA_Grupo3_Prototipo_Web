@@ -19,6 +19,6 @@
 ◣◥◣◥◤◢◤◢◣◥◣◥◤◢◤◢◣◥◣◥◤◢◤◢◣◥◣◥◤◢◤◢◣◥◣◥◤◢◤◢◣◥◣◥◤◢◤◢
 
 #### Enlace al repositorio Seminarios
-> - [https://github.com/alu0100890402/UyA_GRUPO3]
+> - [Repositorio Seminarios](https://github.com/alu0100890402/UyA_GRUPO3)
 
 
