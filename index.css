@@ -1,0 +1,44 @@
+.background{
+    width: 770px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    height:100px;
+    background-image: "cabecera.jpg";
+}
+.font{
+    font-family:Arial;
+    font-size:1.5em;
+    color: #000000;
+}
+
+.link{
+    color: #2f00ff;
+}
+
+.link:hover{
+    color:#ff0000;
+}
+
+.link:visited{
+    color: #5affce;
+}
+.link-table{
+    color: #13c813;
+}
+
+p{
+    margin-top: 0.5em;
+}
+
+.textzone{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer{
+    height:100px;
+}
+
