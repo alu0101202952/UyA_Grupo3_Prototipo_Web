@@ -6,6 +6,7 @@
 
 .navbar{
     height:100px;
+    width: 100vw;
     background-image: "cabecera.jpg";
 }
 .font{
@@ -40,5 +41,6 @@ p{
 
 .footer{
     height:100px;
+    width:100vw;
 }
 
