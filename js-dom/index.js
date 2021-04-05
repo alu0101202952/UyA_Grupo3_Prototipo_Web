@@ -1,15 +1,14 @@
 const meterporteclado = () => {
     const input = document.getElementById("newsletterEmailInput")
     const card = document.getElementById("newsletterCard")
-    card.innerHTML = input.value()
-
+    card.innerHTML = input.value
 }
 
 const calcularCosas = (usuario) => {
-    const {anoNac,sueldoBase,plusAnt,plusProd} = usuario
+    const { anoNac, sueldoBase, plusAnt, plusProd } = usuario
     const edad = new Date(new Date() - new Date(anoNac)).getFullYear() - 1970
     const sueldo = sueldoBase + (sueldoBase * plusProd) / 100 + (sueldoBase * plusAnt) / 100
-    console.log(edad,sueldo)
+    console.log(edad, sueldo)
 }
 
 const contarCosas = () => {
