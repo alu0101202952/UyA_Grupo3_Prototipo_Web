@@ -44,7 +44,9 @@ $("#idForm").submit(function(e) {
 });
  */
 
-/** EJEMPLO DE FORMULARIO 2
+/** EJEMPLO DE FORMULARIO 2:
+ * https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
+ * 
  * $(document).ready(function () {
   $("form").submit(function (event) {
     var formData = {
@@ -66,6 +68,10 @@ $("#idForm").submit(function(e) {
     event.preventDefault();
   });
 });
+ */
+
+/**
+ * 
  */
 
 
