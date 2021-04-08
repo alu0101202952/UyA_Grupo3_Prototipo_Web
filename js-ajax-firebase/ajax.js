@@ -20,3 +20,9 @@ $( "#myForm" ).serialize();
         value: "valor2"
     }
 ]
+
+
+// Initialize the button with the icon option specified:
+$( ".selector" ).button({
+  icon: "ui-icon-gear"
+});
