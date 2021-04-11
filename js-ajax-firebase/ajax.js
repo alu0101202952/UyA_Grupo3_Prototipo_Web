@@ -25,24 +25,19 @@ function validaForm(){
 }
 
 
-$(document).ready(function () {
-  $("form").submit(function (event) {
-    var formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      superheroAlias: $("#superheroAlias").val(),
-    };
-    $.ajax({
-      type: "POST",
-      url: "process.php",
-      data: formData,
-      dataType: "json",
-      encode: true,
-    }).done(function (data) {
-      console.log(data);
-    });
-    event.preventDefault();
-  });
+$(document).ready( function() {   // Esta parte del código se ejecutará automáticamente cuando la página esté lista.
+    $("#botonenviar").click( function() {     // Con esto establecemos la acción por defecto de nuestro botón de enviar.
+        if(validaForm()){                               // Primero validará el formulario.
+            $.post("enviar.php",$("#formdata").serialize(),function(res){
+                $("#formulario").fadeOut("slow");   // Hacemos desaparecer el div "formulario" con un efecto fadeOut lento.
+                if(res == 1){
+                    $("#exito").delay(500).fadeIn("slow");      // Si hemos tenido éxito, hacemos aparecer el div "exito" con un efecto fadeIn lento tras un delay de 0,5 segundos.
+                } else {
+                    $("#fracaso").delay(500).fadeIn("slow");    // Si no, lo mismo, pero haremos aparecer el div "fracaso"
+                }
+            });
+        }
+    });    
 });
 
 /** EJEMPLO DE FORMULARIO 1
@@ -100,6 +95,6 @@ $("#idForm").submit(function(e) {
 
 
 // Initialize the button with the icon option specified:
-$( ".selector" ).button({
+/*$( ".selector" ).button({
   icon: "ui-icon-gear"
-});
+});*/
