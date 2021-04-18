@@ -1,100 +1,65 @@
 function validaForm(){
     // Campos de texto
-    if($("#numero").val() != int){  //Si es distinto a un numero entero
+    if(isNaN($("#numero").val()) || $("#numero").val() == ''){  //Si es distinto a un numero entero o está vacío
         alert("El campo Numero debe ser un numero entero");
-        $("#numero").focus(); // Esta función coloca el foco de escritura del usuario en el campo Numero directamente.
+        $("#numero").trigger('focus'); // Esta función coloca el foco de escritura del usuario en el campo Numero directamente.
         return false;
     }
     if($("#nombre").val() == ""){
         alert("El campo Nombre no puede estar vacío.");
-        $("#nombre").focus();       
+        $("#nombre").trigger('focus');       
         return false;
     }
     if($("#apellidos").val() == ""){
         alert("El campo Apellidos no puede estar vacío.");
-        $("#apellidos").focus();
+        $("#apellidos").trigger('focus');
         return false;
     }
     if($("#direccion").val() == ""){
         alert("El campo Dirección no puede estar vacío.");
-        $("#direccion").focus();
+        $("#direccion").trigger('focus')
         return false;
     }
 
     return true; // Si todo está correcto
 }
 
+jQuery( () => {     // Esta parte del código se ejecutará automáticamente cuando la página esté lista.
 
-$(document).ready( function() {   // Esta parte del código se ejecutará automáticamente cuando la página esté lista.
-    $("#botonenviar").click( function() {     // Con esto establecemos la acción por defecto de nuestro botón de enviar.
-        if(validaForm()){                               // Primero validará el formulario.
-            $.post("enviar.php",$("#formdata").serialize(),function(res){
-                $("#formulario").fadeOut("slow");   // Hacemos desaparecer el div "formulario" con un efecto fadeOut lento.
-                if(res == 1){
-                    $("#exito").delay(500).fadeIn("slow");      // Si hemos tenido éxito, hacemos aparecer el div "exito" con un efecto fadeIn lento tras un delay de 0,5 segundos.
-                } else {
-                    $("#fracaso").delay(500).fadeIn("slow");    // Si no, lo mismo, pero haremos aparecer el div "fracaso"
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database()
+
+    $("#botonenviar").on('click', (e) => {
+        if( validaForm() ) {
+            
+            let form = $("#formdata");
+            let url = `https://jsonplaceholder.typicode.com/comments?postId=${$('#numero').val()}`;
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(),
+                success: (data) => {
+                    delete data.id
+                    $("#respuesta").text(JSON.stringify(data))
+                    // Guardamos en la base de datos de firebase
+                    const referencia = database.ref(data.numero);
+                    delete data.numero    // eliminamos los campos que no queremos guardar
+                    referencia.set(data);
                 }
             });
         }
-    });    
-});
-
-/** EJEMPLO DE FORMULARIO 1
- * // this is the id of the form
-$("#idForm").submit(function(e) {
-
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-
-    var form = $(this);
-    var url = form.attr('action');
-    
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: form.serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               alert(data); // show response from the php script.
-           }
-         });
-
-    
-});
- */
-
-/** EJEMPLO DE FORMULARIO 2:
- * https://www.digitalocean.com/community/tutorials/submitting-ajax-forms-with-jquery
- * 
- * $(document).ready(function () {
-  $("form").submit(function (event) {
-    var formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      superheroAlias: $("#superheroAlias").val(),
-    };
-
-    $.ajax({
-      type: "POST",
-      url: "process.php",
-      data: formData,
-      dataType: "json",
-      encode: true,
-    }).done(function (data) {
-      console.log(data);
     });
+})
 
-    event.preventDefault();
-  });
-});
- */
-
-/**
- * 
- */
-
-
-// Initialize the button with the icon option specified:
-/*$( ".selector" ).button({
-  icon: "ui-icon-gear"
-});*/
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyCzwDAUSHYiwRsKbFQalOSW0n-TNG-El4I",
+    authDomain: "ua-practica.firebaseapp.com",
+    databaseURL: "https://ua-practica-default-rtdb.firebaseio.com",
+    projectId: "ua-practica",
+    storageBucket: "ua-practica.appspot.com",
+    messagingSenderId: "165323602669",
+    appId: "1:165323602669:web:f61b4ac44b0a37d0f96ae4"
+};
