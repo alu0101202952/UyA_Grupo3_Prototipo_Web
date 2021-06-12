@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Register - MagtimusPro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-page">
+            <a href="cssvanilla/inicio.html" class="brand-logo">Logo</a>
+            <ul id="nav-web" class="right hide-on-med-and-down">
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contenedor__todo">
+        <br>
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la aplicación</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse">Registrarse</button>
+            </div>
+        </div>
+
+        <!--Formulario de Login y registro-->
+        <div class="contenedor__login-register">
+            <!--Login-->
+            <form action="" class="formulario__login" onsubmit="return validacion()">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Correo Electronico" id="email" autofocus="true" required>
+                <input type="password" placeholder="Contraseña" id="password" autofocus="true" required>
+                <button>Entrar</button>
+            </form>
+
+            <!--Register-->
+            <form action="" class="formulario__register" onsubmit="return validacion()">
+                <h2>Regístrate</h2>
+                <input type="text" placeholder="Nombre completo" id="name" autofocus="true" required>
+                <input type="text" placeholder="Correo Electronico" id="email" autofocus="true" required>
+                <input type="text" placeholder="Usuario" id="user" autofocus="true" required>
+                <input type="number" name="nacido" min="1900" placeholder="Año de nacimiento" id="year" autofocus="true" required>
+                <input type="password" placeholder="Contraseña" id="password" minlength="8" autofocus="true" required>
+                <button>Regístrarse</button>
+            </form>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CONTACTO</h5>
+                    <a class="black-text" href="miembrosGrupo.html">Grupo 3 Usabilidad y Accesibilidad</a><br>
+                    <a class="white-text">Camino San Francisco de Paula,</a>
+                    <a class="white-text">38203 San Cristóbal de La Laguna</a>
+                    <a class="white-text">Escuela Superior de Ingeniería y Tecnología</a>
+                    <br>
+                    <a class="white-text">Teléfono: 922 31 83 09</a>
+                    <br> email:
+                    <a class="black-text" href="https://www.ull.es/centros/escuela-superior-de-ingenieria-y-tecnologia/"> esit@ull.es</a>
+                    <p class="grey-text text-lighten-4"></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">ENLACES DE INTERÉS</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="contacto.html">Contacto</a></li>
+                        <li><a class="grey-text text-lighten-3" href="accesibilidad.html">Accesibilidad</a></li>
+                        <li><a class="grey-text text-lighten-3" href="politicaPrivacidad.html">Política de privacidad</a></li>
+                        <li><a class="grey-text text-lighten-3" href="miembrosGrupo.html">Quiénes somos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
