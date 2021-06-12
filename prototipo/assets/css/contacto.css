@@ -1,0 +1,39 @@
+.background {
+    margin: auto;
+    padding: 35px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    border: 2px solid black;
+}
+
+input:invalid:required {
+    border: 2px solid red;
+    background: #e95b5b;
+    color: #000;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+.contact-form button {
+    padding: 10px 40px;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    outline: none;
+    transition: all 300ms;
+}
+
+.contact-form button:hover {
+    background: rgb(56, 122, 245);
+    color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+}

@@ -81,7 +81,7 @@ main {
 
 input:invalid:required {
     border: 2px solid red;
-    background: #ff4d4d;
+    background: #e95b5b;
     color: #000;
 }
 
