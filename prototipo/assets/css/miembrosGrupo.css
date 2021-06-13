@@ -1,0 +1,11 @@
+.nav-page {
+    padding: 0 20px;
+}
+
+.bg-img {
+    background-image: url(../images/fondogris.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}

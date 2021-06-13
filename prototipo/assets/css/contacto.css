@@ -1,13 +1,27 @@
-.background {
-    margin: auto;
-    padding: 35px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
 
+.background {
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-page {
+    padding: 0 20px;
+}
+
 input {
     border: 2px solid black;
+    padding: 5px !important;
+    height: 2rem !important;
 }
 
 input:invalid:required {

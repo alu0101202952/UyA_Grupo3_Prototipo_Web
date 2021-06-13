@@ -18,7 +18,7 @@ main {
 }
 
 .bg-img {
-    background-image: url(../images/foxy.jpg);
+    background-image: url(../images/fondologin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,7 +43,7 @@ main {
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(70px);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #d3e4e2b7;
 }
 
 .caja__trasera div {
@@ -80,15 +80,16 @@ main {
 }
 
 .caja__trasera button:hover {
-    background: #fff;
-    color: #000000;
+    background: rgb(56, 122, 245);
+    color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 
 /*Formularios*/
 
 input:invalid:required {
-    border: 2px solid transparent;
+    border: 2px solid red;
     background: lightcoral;
     color: #000;
 }
@@ -121,7 +122,7 @@ input {
 .contenedor__login-register form {
     width: 100%;
     padding: 80px 20px;
-    background: white;
+    background: #ffffff;
     border: 2px solid rgb(0, 0, 0);
     position: absolute;
     border-radius: 40px;
@@ -131,7 +132,7 @@ input {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #F08080;
+    color: black
 }
 
 .contenedor__login-register form input {
@@ -139,7 +140,7 @@ input {
     margin-top: 20px;
     padding: 10px;
     border: none;
-    background: #ffffff;
+    background: #92c9da;
     font-size: 16px;
     outline: none;
 }
@@ -147,7 +148,7 @@ input {
 .contenedor__login-register form button {
     padding: 10px 40px;
     margin-top: 40px;
-    border: none;
+    border: black;
     font-size: 14px;
     background: #46A2FD;
     font-weight: 600;
@@ -188,113 +189,4 @@ input {
     .contenedor__login-register form {
         position: relative;
     }
-}
-
-/* Dashboard */
-
-.container {
-    width: 80%;
-}
-
-.body-page {
-    border: 1px solid blue;
-    padding: 0 7vw;
-}
-
-#calendar {
-    height: 600px;
-    width: 48vw;
-    scroll-snap-type: y mandatory;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    text-align: center;
-}
-
-.month {
-    height: 600px;
-    width: 48vw;
-    scroll-snap-align: center;
-    display: grid;
-    grid-template-rows: 80px;
-}
-
-ol {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin: 0;
-    padding: 0;
-    width: 48vw;
-    grid-template-rows: 60px;
-}
-
-.li-item {
-    font-size: 1.5ch;
-    padding-top: 10px;
-    cursor: pointer;
-}
-
-.li-item:hover {
-    background-color: #eee;
-}
-
-.first-day {
-    grid-column-start: var(--first-day-start)
-}
-
-.day-name {
-    background: #eee;
-    font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 2px;
-    padding: 4px;
-    text-align: center;
-    line-height: 50px;
-}
-
-
-.h2-item {
-    font-size: 28pt;
-    line-height: 20px;
-    width: 50vw;
-}
-
-.note-title {
-    font-size: 24px;
-}
-
-.sticky-note-container {
-    /* border: 1px solid blue; */
-    /* width: 300px; */
-    margin: 20px;
-    padding: 20px !important;
-    margin-top: 40px;
-}
-
-.sticky-note {
-    width: 300px;
-    height: 300px;
-    background-color: #FFFF88;
-    padding: 30px 40px;
-    font-size: medium;
-}
-
-.sticky-note li {
-    padding: 2px;
-    font-size: 18px;
-}
-
-.calendar-wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.add-event {
-    margin: auto;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.enlaces {
-    margin-bottom: 30px;
 }

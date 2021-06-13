@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.nav-page {
+    padding: 0 20px;
+}
+
+.background {
+    background-image: url(../images/fondoinicio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Dashboard */
+
+.container {
+    width: 80%;
+}
+
+.body-page {
+    border: 1px solid blue;
+    padding: 0 7vw;
+}
+
+.table-container {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(90, 207, 201);
+}
+
+#calendar {
+    height: 600px;
+    width: 48vw;
+    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.month {
+    height: 600px;
+    width: 48vw;
+    scroll-snap-align: center;
+    display: grid;
+    grid-template-rows: 80px;
+}
+
+ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 0;
+    width: 48vw;
+    grid-template-rows: 60px;
+}
+
+.li-item {
+    font-size: 1.5ch;
+    padding-top: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.li-item:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.first-day {
+    grid-column-start: var(--first-day-start)
+}
+
+.day-name {
+    background: rgb(84, 110, 194);
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+    padding: 4px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.h2-item {
+    font-size: 28pt;
+    line-height: 20px;
+    width: 50vw;
+}
+
+.note-title {
+    font-size: 24px;
+}
+
+.sticky-note-container {
+    /* border: 1px solid blue; */
+    /* width: 300px; */
+    margin: 20px;
+    padding: 20px !important;
+    margin-top: 40px;
+}
+
+.sticky-note {
+    width: 300px;
+    height: 300px;
+    background-color: #357791;
+    padding: 30px 40px;
+    font-size: medium;
+}
+
+.sticky-note li {
+    padding: 2px;
+    font-size: 18px;
+}
+
+.calendar-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-event {
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.enlaces {
+    margin-bottom: 30px;
+}
