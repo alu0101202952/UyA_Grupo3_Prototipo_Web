@@ -65,12 +65,9 @@ function register() {
     }
 }
 
-function validacion() {
-    correo = document.getElementById("email").value;
-    contrasenia = document.getElementById("password").value;
-    //nombre = document.getElementById("name").value;
-    //usuario = document.getElementById("user").value;
-    //anio = document.getElementById("year").value;
+function validacion_inicio() {
+    correo = document.getElementById("login_email").value;
+    contrasenia = document.getElementById("login_password").value;
 
     if (!(/^([da-z_.-]+)@([da-z.-]+).([a-z.])$/.test(correo))) {
         alert('[ERROR] El campo "Correo Electrónico" es incorrecto.\n El correo tiene que ser: ejemplo@gmail.com o ejemplo@hotmail.com');
@@ -79,17 +76,36 @@ function validacion() {
         alert('[ERROR] El campo "Contraseña" es incorrecto.\n La contraseña ha de ser de mínimo 8 caracteres alfa-numéricos');
         return false;
     }
-    /*else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
-        alert('[ERROR] Campo de texto OBLIGATORIO');
+
+    // Si el script ha llegado a este punto, todas las condiciones
+    // se han cumplido, por lo que se devuelve el valor true
+    return true;
+}
+
+const validacion_registro = () => {
+    const correo = document.getElementById("reg_email").value;
+    const contrasenia = document.getElementById("reg_password").value;
+    const nombre = document.getElementById("name").value;
+    const usuario = document.getElementById("user").value;
+    const anio = document.getElementById("year").value;
+
+    if (!(/^([da-z_.-]+)@([da-z.-]+).([a-z.])$/.test(correo))) {
+        alert('[ERROR] El campo "Correo Electrónico" es incorrecto.\n El correo tiene que ser: ejemplo@gmail.com o ejemplo@hotmail.com');
+        return false;
+    } else if (contrasenia == null || contrasenia.length == 0 || contrasenia.length < 8) {
+        alert('[ERROR] El campo "Contraseña" es incorrecto.\n La contraseña ha de ser de mínimo 8 caracteres alfa-numéricos');
+        return false;
+    }
+    else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+        alert('[ERROR] Nombre: Campo de texto OBLIGATORIO');
         return false;
     } else if (usuario == null || usuario.length == 0 || /^\s+$/.test(usuario)) {
-        alert('[ERROR] Campo de texto OBLIGATORIO');
+        alert('[ERROR] Usuario: Campo de texto OBLIGATORIO');
         return false;
-    } else if (!isNaN(anio)) {
-        alert('[ERROR] Campo de texto OBLIGATORIO');
+    } else if (!anio) {
+        alert(`[ERROR] Año:${anio} Campo de texto OBLIGATORIO`);
         return false;
     }   
-    */
 
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true

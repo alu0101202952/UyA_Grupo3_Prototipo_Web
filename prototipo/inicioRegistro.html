@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="assets/css/inicioRegistro.css">
 </head>
 
-<body>
+<body class="bg-img">
     <nav>
         <div class="nav-page">
-            <a href="cssvanilla/inicio.html" class="brand-logo">Logo</a>
+            <a href="inicio.html" class="brand-logo">Logo</a>
             <ul id="nav-web" class="right hide-on-med-and-down">
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
@@ -40,21 +40,21 @@
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register">
             <!--Login-->
-            <form action="" class="formulario__login" onsubmit="return validacion()">
+            <form action="dashboard.html" class="formulario__login" onsubmit="return validacion_inicio()">
                 <h2>Iniciar Sesión</h2>
-                <input type="text" placeholder="Correo Electronico" id="email" autofocus="true" required>
-                <input type="password" placeholder="Contraseña" id="password" autofocus="true" required>
+                <input type="text" placeholder="Correo Electronico" id="login_email" autofocus="true" required>
+                <input type="password" placeholder="Contraseña" id="login_password" autofocus="true" required>
                 <button>Entrar</button>
             </form>
 
             <!--Register-->
-            <form action="" class="formulario__register" onsubmit="return validacion()">
+            <form action="dashboard.html" class="formulario__register" onsubmit="return validacion_registro()">
                 <h2>Regístrate</h2>
                 <input type="text" placeholder="Nombre completo" id="name" autofocus="true" required>
-                <input type="text" placeholder="Correo Electronico" id="email" autofocus="true" required>
+                <input type="text" placeholder="Correo Electronico" id="reg_email" autofocus="true" required>
                 <input type="text" placeholder="Usuario" id="user" autofocus="true" required>
                 <input type="number" name="nacido" min="1900" placeholder="Año de nacimiento" id="year" autofocus="true" required>
-                <input type="password" placeholder="Contraseña" id="password" minlength="8" autofocus="true" required>
+                <input type="password" placeholder="Contraseña" id="reg_password" minlength="8" autofocus="true" required>
                 <button>Regístrarse</button>
             </form>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">CONTACTO</h5>
+                    <h3 class="white-text">CONTACTO</h3>
                     <a class="black-text" href="miembrosGrupo.html">Grupo 3 Usabilidad y Accesibilidad</a><br>
                     <a class="white-text">Camino San Francisco de Paula,</a>
                     <a class="white-text">38203 San Cristóbal de La Laguna</a>
@@ -77,7 +77,7 @@
                     <p class="grey-text text-lighten-4"></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">ENLACES DE INTERÉS</h5>
+                    <h3 class="white-text">ENLACES DE INTERÉS</h3>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="contacto.html">Contacto</a></li>
                         <li><a class="grey-text text-lighten-3" href="accesibilidad.html">Accesibilidad</a></li>

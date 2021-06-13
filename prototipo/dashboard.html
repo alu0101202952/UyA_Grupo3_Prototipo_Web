@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="utf-8">
+  <title>Prototipo grupo3-materialize</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/inicioRegistro.css">
+</head>
+
+<body>
+  <nav>
+      <div class="nav-page">
+        <a href="inicio.html" class="brand-logo">Logo</a>
+        <ul id="nav-web" class="right hide-on-med-and-down">   
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+  </nav>
+    
+  <div class="container"> 
+      <div class="sections">
+          <div class="col s7">
+            <h1>Hola de nuevo</h1>
+            <h3>Aquí se muestra el horario de tu curso 2020/21</h3>
+            <!-- <img src="./assets/images/gestion_tiempo.png"> -->
+            <h4>Para verlo en su contexto visita la página web: </h4>
+            <p><a href="https://www.ull.es/grados/ingenieria-informatica/informacion-academica/horarios-y-calendario-examenes/">Horario informática ULL</a></p> 
+            <br>
+            <div class="table-container">
+              <table class="striped centered highlight responsive-table">
+              <thead>
+                <tr>
+                  <th> Horas </th>
+                  <th> Lunes </th>
+                  <th> Martes </th>
+                  <th> Miércoles </th>
+                  <th> Jueves </th>
+                  <th> Viernes </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>9:30 - 10:25</td>
+                  <td> Desarrollo de Sistemas Informáticos (PE 102) </td>
+                  <td></td>
+                  <td> Seguridad en Sistemas Informáticos (PE 103) </td>
+                  <td> Usabilidad y Accesibilidad (PE101) </td>
+                  <td></td>
+                </tr> 
+    
+                <tr>
+                  <td>10:30 - 11:25</td>
+                  <td> Desarrollo de Sistemas Informáticos (PE 102) </td>
+                  <td></td>
+                  <td> Seguridad en Sistemas Informáticos (PE 103) </td>
+                  <td> Usabilidad y Accesibilidad (PE101) </td>
+                  <td> Laboratorio de redes (PA101) </td>
+                </tr> 
+    
+                <tr>
+                  <td>11:30-12:00</td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                </tr> 
+    
+                <tr>
+                  <td>12:00-12:55</td>
+                  <td> Seguridad en Sistemas Informáticos (1) </td>
+                  <td> Desarrollo de Sistemas Informáticos (1) </td>
+                  <td> Usabilidad y Accesibilidad (1) </td>
+                  <td> Redes de Computadores (1) </td>
+                  <td> Redes de Computadores (1) </td>
+                </tr> 
+    
+                <tr>
+                  <td>12:00-12:55</td>
+                  <td> Seguridad en Sistemas Informáticos (1) </td>
+                  <td> Desarrollo de Sistemas Informáticos (1) </td>
+                  <td> Usabilidad y Accesibilidad (1) </td>
+                  <td> Redes de Computadores (1) </td>
+                  <td> Redes de Computadores (1) </td>
+                </tr> 
+    
+                <tr>
+                  <td>14:00-16:00</td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                  <td> Descanso </td>
+                </tr> 
+    
+                <tr>
+                  <td>16:00-16:55</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td> Laboratorio de Redes (PE 102) </td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td>17:00-17:55</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td> Laboratorio de Redes (PE 102) </td>
+                  <td></td>
+                </tr>
+    
+                <tr>
+                  <td>18:00-18:55</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td> Laboratorio de Redes (PE 102) </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+          <div class="calendar-wrapper">
+              <div id="calendar"></div>
+            <div class="sticky-note-container">
+              <div class="sticky-note">
+                <span class="note-title">Próximos eventos</span>
+                <ul>
+                  <li>- Un evento tal</li>
+                  <li>- Otro evento equisde</li>
+                  <li>- Un evento tal</li>
+                  <li>- Otro evento equisde</li>
+                  <li>- Un evento tal</li>
+                </ul>
+              </div>
+              <div class="add-event">
+                <button class="btn" onclick="addEvent()">
+                  <i class="material-icons left">add</i>
+                  Añadir evento
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s3">
+            <h1>Artículos de Interés</h1>
+
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./assets/images/article-1.jpg">
+                    <span class="card-title">Dolores Corbella, una mujer de palabras</span>
+                  </div>
+                  <div class="card-content">
+                    <p>El currículo académico de Corbella es tan impresionante como cabría esperar y basta con mencionar que fue catedrática a los 37 años para comprender su dimensión. La valía de su trabajo lexicográfico ha traspasado fronteras y, por ello, es desde 2015 académica correspondiente de la Real Academia Española y llegó a ser candidata para ocupar el sillón “M” en la misma institución.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://www.ull.es/portal/noticias/2021/dolores-corbella-mujer-palabras/">Enlace al artículo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="./assets/images/article-2.jpg">
+                    <span class="card-title">Viajando al futuro climático de Canarias</span>
+                  </div>
+                  <div class="card-content">
+                    <p>Un excelente ejemplo lo encontramos en el Grupo de Observación de la Tierra y la Atmósfera (GOTA) de la Universidad de La Laguna. Este grupo de investigadores, con el que hemos querido celebrar el Día Meteorológico Mundial, tiene su base de operaciones en la Sección de Física. Desde allí trabajan en varios proyectos de investigación que tienen un denominador común: el estudio de la meteorología y climatología de nuestra región.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://www.ull.es/portal/noticias/2021/viajando-al-futuro-climatico-de-canarias/">Enlace al artículo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="enlaces">
+            <h4>Enlaces de Interés</h4>
+            <p><a href="https://www.ull.es/">Página de la Universidad de La Laguna</a><p>
+            <p><a href="https://www.ull.es/grados/ingenieria-informatica/informacion-academica/horarios-y-calendario-examenes/">Horario y Calendario Grado Informática</a><p>
+          </div>
+
+      </div> 
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h4 class="white-text">CONTACTO</h4>
+                <a class="black-text" href="miembrosGrupo.html">Grupo 3 Usabilidad y Accesibilidad</a><br>
+                <a class="white-text">Camino San Francisco de Paula,</a>
+                <a class="white-text">38203 San Cristóbal de La Laguna</a>
+                <a class="white-text">Escuela Superior de Ingeniería y Tecnología</a>
+                <br>
+                <a class="white-text">Teléfono: 922 31 83 09</a>
+                <br> email:
+                <a class="black-text" href="https://www.ull.es/centros/escuela-superior-de-ingenieria-y-tecnologia/"> esit@ull.es</a>
+                <p class="grey-text text-lighten-4"></p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h4 class="white-text">ENLACES DE INTERÉS</h4>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="contacto.html">Contacto</a></li>
+                    <li><a class="grey-text text-lighten-3" href="accesibilidad.html">Accesibilidad</a></li>
+                    <li><a class="grey-text text-lighten-3" href="politicaPrivacidad.html">Política de privacidad</a></li>
+                    <li><a class="grey-text text-lighten-3" href="miembrosGrupo.html">Quiénes somos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+        </div>
+    </div>
+
+</footer>
+
+<script src="./assets/js/calendar.js"></script>
+</body>
