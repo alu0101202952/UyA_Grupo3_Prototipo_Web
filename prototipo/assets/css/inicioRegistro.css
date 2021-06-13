@@ -29,6 +29,31 @@ main {
     padding: 0 20px;
 }
 
+
+/* Color de links y subrayado para marcar dónde se está*/
+
+.nav-link:hover {
+    background-color: #3a7688;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline 2px;
+    color: blue;
+}
+
+.footer-link {
+    color: rgb(219, 219, 219);
+}
+
+.footer-link:hover {
+    text-decoration: underline 2px;
+    color: blue;
+}
+
 .contenedor__todo {
     width: 100%;
     max-width: 800px;
@@ -113,7 +138,7 @@ input {
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -210px;
+    top: -260px;
     left: 10px;
     /*La transicion va despues del codigo JS*/
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);

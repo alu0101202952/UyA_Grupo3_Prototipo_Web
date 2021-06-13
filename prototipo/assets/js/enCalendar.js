@@ -1,7 +1,7 @@
 const createCalendar = ({ year }) => {
     console.log("Creando calendario tal");
     const weekdays = [...Array(7).keys()]
-    const intlWeekDay = new Intl.DateTimeFormat('es', { weekday: 'short' })
+    const intlWeekDay = new Intl.DateTimeFormat('en', { weekday: 'short' })
 
     const el = document.getElementById('calendar')
 
@@ -22,7 +22,7 @@ const createCalendar = ({ year }) => {
     const renderedWeekDays = weekDaysNames.map(weekDayName => `<li class='day-name'>${weekDayName.toUpperCase()}</li>`).join('')
 
     const months = [...Array(12).keys()]
-    const intl = new Intl.DateTimeFormat('es', { month: 'long' })
+    const intl = new Intl.DateTimeFormat('en', { month: 'long' })
 
     const calendar = months.map(monthKey => {
         const monthName = intl.format(new Date(year, monthKey))

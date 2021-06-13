@@ -23,6 +23,28 @@
     padding: 0 20px;
 }
 
+.nav-link:hover {
+    background-color: #3a7688;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline 2px;
+    color: blue;
+}
+
+.footer-link {
+    color: rgb(219, 219, 219);
+}
+
+.footer-link:hover {
+    text-decoration: underline 2px;
+    color: blue;
+}
+
 input {
     border: 2px solid black;
     padding: 5px !important;
