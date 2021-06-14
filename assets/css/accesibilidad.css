@@ -7,6 +7,14 @@
     background-size: cover;
 }
 
+h1 {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+}
+
 :lang(es) {
     font-size: auto;
     font-family: 'Roboto', sans-serif;
