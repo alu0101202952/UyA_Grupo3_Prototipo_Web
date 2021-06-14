@@ -78,3 +78,9 @@ input:valid {
     color: #ffffff;
     border: 2px solid rgb(0, 0, 0);
 }
+
+.comentarios {
+    background-color: #ffffff;
+    width: 60%;
+    height: 40%;
+}
