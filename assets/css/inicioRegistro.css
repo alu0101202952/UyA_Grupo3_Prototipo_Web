@@ -112,7 +112,7 @@ main {
 
 .caja__trasera button:hover {
     background: rgb(56, 122, 245);
-    color: #ffffff;
+    color: #000000;
     border: 2px solid rgb(0, 0, 0);
 }
 
