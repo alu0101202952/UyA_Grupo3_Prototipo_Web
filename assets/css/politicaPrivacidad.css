@@ -9,15 +9,27 @@
 }
 
 h1 {
-    font-size: xx-large;
+    font-weight: normal;
+    font-size: 55px;
+    font-family: Arial;
 }
 
 h2 {
-    font-size: x-large;
+    font-weight: normal;
+    font-size: 45px;
+    font-family: Arial;
 }
 
 h3 {
-    font-size: large;
+    font-weight: normal;
+    font-size: 35px;
+    font-family: Arial;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 25px;
+    font-family: Arial;
 }
 
 .nav-page {
