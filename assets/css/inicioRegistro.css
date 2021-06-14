@@ -17,6 +17,12 @@ main {
     margin-top: 100px;
 }
 
+.black-text-label {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
 .bg-img {
     background-image: url(../images/fondologin.jpg);
     background-size: cover;
