@@ -13,7 +13,6 @@ var caja_trasera_register = document.querySelector(".caja__trasera-register");
 
 
 //FUNCIONES
-
 function anchoPage() {
     if (window.innerWidth > 850) {
         caja_trasera_register.style.display = "block";
@@ -95,8 +94,7 @@ const validacion_registro = () => {
     } else if (contrasenia == null || contrasenia.length == 0 || contrasenia.length < 8) {
         alert('[ERROR] El campo "Contraseña" es incorrecto.\n La contraseña ha de ser de mínimo 8 caracteres alfa-numéricos');
         return false;
-    }
-    else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
+    } else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
         alert('[ERROR] Nombre: Campo de texto OBLIGATORIO');
         return false;
     } else if (usuario == null || usuario.length == 0 || /^\s+$/.test(usuario)) {
@@ -105,7 +103,7 @@ const validacion_registro = () => {
     } else if (!anio) {
         alert(`[ERROR] Año:${anio} Campo de texto OBLIGATORIO`);
         return false;
-    }   
+    }
 
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true
